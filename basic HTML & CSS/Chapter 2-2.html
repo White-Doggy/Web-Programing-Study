@@ -1,0 +1,55 @@
+<html>    
+<head>
+    <style>
+        body > div {
+            color : red;
+            font-size: 30px;
+            border: 2px solid slategray;
+            padding: 30px;
+        }
+    </style>
+    
+    <!-- 
+        상속
+        상위 대상에 대한 속성 적용은 하위 대상도 적용 됨        
+
+        * 단 배치와 관련된 내용은 상속 되지 않음
+
+
+        캐스캐이딩 == css의 적용 경쟁에 따른 적용 순서
+
+
+        1. 선언 방식 차이
+        inline > internal > external
+
+        2. 동일 방식 시
+        나중에 적용된 내용이 적용
+        
+        3. 구체적 정도
+        더 정확한 지칭에 대해 적용
+
+        4. id & class
+        id가 class 보다 우선됨, class는 일반 오브젝트보다 우선                
+     -->
+
+     
+
+</head>        
+<body>
+
+<div>
+    <span>my text is real</span>
+    <ul>
+        <li>  
+            <span>my text is dummy</span>
+            <div>
+                <p>
+                    testing 1234
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>    
+
+</body>
+</html>
