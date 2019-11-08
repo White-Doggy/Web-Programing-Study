@@ -1,0 +1,50 @@
+<html>    
+<head>
+    <style>
+        /*
+            flex
+
+            easily change positioning of contents
+            but, some browser cant use this      
+
+            good for mobile web page design      
+        */
+    
+    /* layout */
+      .wrap {
+          background-color: blue;
+          height: 500px;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+      }
+
+    /* content */      
+      .wrap > div{
+          margin:10px;
+          padding: 10px;
+          height: 30px;
+          background-color: skyblue;
+          color: darkblue;           
+
+          flex-grow: 1;
+      }
+    
+    /*
+    reference 
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    */
+
+    </style>
+</head>        
+<body>
+    <div class="wrap">
+        <div>test1</div>        
+        <div>test2</div>        
+        <div>test3</div>        
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>

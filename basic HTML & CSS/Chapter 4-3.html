@@ -1,0 +1,36 @@
+<html>    
+<head>
+    <style>
+      .wrap {
+          background-color: blue;
+          overflow: hidden; /* solve float excepted problem */
+      }
+      .wrap > div{
+          margin:10px;
+          width: 100px;
+          height: 100px;
+          background-color: darkgray;
+          color: snow; 
+          float: left; /* usually float excepted other contents */
+      }
+
+      footer {
+          width: 300px;
+          height: 100px;
+          background-color: green;
+          clear: left; /* dont except float left too */
+      }
+
+
+    </style>
+</head>        
+<body>
+    <div class="wrap">
+        <div>first</div>
+        <div>second</div>
+        <div>third</div>        
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>

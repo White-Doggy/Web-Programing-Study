@@ -1,0 +1,41 @@
+<html>    
+<head>
+    <style>
+      .wrap > div{
+          margin:10px;
+          width: 100px;
+          height: 100px;
+          border: 1px solid gray;
+          position: static; /* absolute except this */
+      }
+
+      .wrap > div:nth-child(2) {
+          color:red;
+          position: relative; /* move from base position */
+          top: 40px;
+          left: 40px;
+      }
+
+      .wrap >div:nth-child(1)      {
+          position: absolute; /* move from parent position (except parent) / other object ignore this */
+          top: 20px;
+          left: 20px;
+      }
+
+      .wrap > div:nth-child(3) {
+          position: fixed; /* fixed from scroll move */
+          top: 10px;
+          left: 10px;
+      }
+
+
+    </style>
+</head>        
+<body>
+    <div class="wrap">
+        <div>first</div>
+        <div>second</div>
+        <div>third</div>        
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>    
+<head>
+    <style>
+        body > div {
+            font-size: 32px; /* parent's size can be base for child */
+            background-color: green;
+            font-family: sans-serif;
+        }
+
+        .myspan{
+            color : #ff0000;
+            font-size: 2em; /* 1em == base size */
+        }
+
+        /*----------------------------------------------------*/
+
+        .wrap {
+            color: snow;
+            width: 100px;
+            height: 100px;
+            border: 1px solid slategray;
+            padding: 40px 10px 10px 10px;        
+            margin: 10px;
+        }
+
+        /*
+        인접 마진 == bigger one        
+        inline margin == sum of margin
+        */
+
+    </style>
+</head>        
+<body>
+<div>
+    <span class="myspan">text test</span>
+</div>
+
+<!-- ----------------------------------- -->
+
+<div class="wrap">
+    div test
+</div>
+
+<div>
+    other div elements
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>    
+<head>
+    <style>
+    /* 
+    
+    z-index 
+    
+    bigger one == much front 
+
+    parents z-index first check
+    than check z-index
+    
+    */
+      .wrap > div {
+        width: 100px;
+        height: 100px;
+        margin: 0.5em;
+        color: #ffffff;
+        position: absolute;
+      }
+
+      .wrap > div:nth-child(1) {
+          top: 10px;
+          left: 10px;
+          background-color: red;
+          z-index:1;
+      }
+      
+      .wrap > div:nth-child(2) {
+          top: 20px;
+          left: 20px;
+          background-color: blue;
+          z-index: 10;
+      }
+      
+      .wrap > div:nth-child(3) {
+          top: 30px;
+          left: 30px;
+          background-color: green;
+          
+      }
+    </style>
+</head>        
+<body>
+    <div class="wrap">
+        <div>test1</div>        
+        <div>test2</div>        
+        <div>test3</div>        
+    </div>    
+    <footer>
+    </footer>
+</body>
+</html>
