@@ -1,0 +1,64 @@
+<html>    
+<head>
+    <style>
+        .wrap{
+            height: 400px;
+            width: 300px;
+            border: 1px solid gray;
+            padding: 1em;
+        }
+
+        .content {
+            width: 200px;
+            height: 100px;
+            border: 1px solid gray;
+            margin:0px auto;    
+        }
+
+        .content li {
+            list-style:none;
+        }
+        
+        .content li a {
+            color: greenyellow;
+        }
+
+        /*
+            dom 형식에 따라 css의 적용 방식은 다르지만
+            어디에 작성하든 적용됨에 따라, 이곳 저곳에 중복으로 작성하던가 하는 문제가 생길 수 있음
+
+            결국 아쉬운 점,
+            1. 변수
+            2. mixins
+            3. 중첩된 내용 문제
+            4. 연산 불가
+
+            -> LESS를 통한 처리
+        */
+
+    </style>
+</head>        
+<body>
+   <div class="wrap">
+       <h3>Hello world</h3>
+       <div class="content">
+            <ul>
+                <li><a href="">한국일보</a></li>
+                <li><a href="">조선일보</a></li>
+                <li><a href="">매일경제</a></li>
+                <li><a href="">스포츠조선</a></li>
+            </ul>
+       </div>
+   </div>
+
+   <footer>
+        <ul>
+            <li><a href="">한국일보</a></li>
+            <li><a href="">조선일보</a></li>
+            <li><a href="">매일경제</a></li>
+            <li><a href="">스포츠조선</a></li>
+        </ul>
+   </footer>
+
+</body>
+</html>

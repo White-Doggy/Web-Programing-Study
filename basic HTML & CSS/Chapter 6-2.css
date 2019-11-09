@@ -1,0 +1,24 @@
+.wrap {
+  position:relative; 
+}
+.box {
+  width:100px;height:100px;
+  background-color:slategray;
+  color:#fff;
+  text-align:center;
+  line-height:100px;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+/* transform */
+/*여러 옵션을 통해 변형을 줄 수 있음*/
+.box:nth-child(2){
+  transform: translateX(100px); 
+  /* 이 경우는 배치만을 위해 사용 했는데, float나 포지션 값 주는것 보다 빠른 처리 */
+}
+.box:nth-child(3){
+  transform: translate3d(200px,0,0);
+  /* 이 경우는 훨씬 빠르게 처리되어, 모바일 웹 브라우져에서 처리가 빨라짐 */
+}

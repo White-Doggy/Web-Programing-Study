@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+  <style>
+    /*
+        LESS
+        따로 처리가 필요하지만 작성이 매우 편해짐        
+    */
+    @base_width:400px;
+    @base_height:200px;
+    @gray_border:1px solid gray; /* 변수 선언 */
+
+.wrap {
+  width:@base_width;    
+  height:@base_height; /* 활용이 가능해 짐 */
+  border:1px solid gray;
+  padding:1rem;
+}
+
+.content {
+  width:200px;
+  height:100px;
+  border:@gray_border/2; /* 변수에 대한 연산이 가능 */
+  margin:0px auto;
+  
+  li { /* .content li 에 대한 내용을 안에 포함 시킬 수 있음 */
+  list-style:none; 
+  }
+}
+
+footer li {
+  color:red;
+}
+
+footer ul {
+  .content; /* mixin 다른 컨텐츠 내용을 그대로 끌어 사용 가능  */
+  margin-top:12px;
+}
+
+.wrap > h3 {
+  text-align:center;
+  color:#5d1;
+}
+
+.content li a {
+  color:#5d1;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h3>Hello world</h3>
+    <div class="content">
+      <ul>
+        <li><a href="">한국일보</a></li>
+        <li><a href="">조선일보</a></li>
+        <li><a href="">매일경제</a></li>
+        <li><a href="">스포츠조선</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <footer>
+    <ul>
+      <li><a href="">새로운뉴스</a></li>
+      <li><a href="">이전뉴스</a></li>
+      <li><a href="">인기뉴스</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

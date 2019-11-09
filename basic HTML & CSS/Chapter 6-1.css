@@ -1,0 +1,18 @@
+.box {
+    width:100px;height:100px;
+    background-color:slategray;
+    color:#fff;
+    text-align:center;
+    line-height:100px;
+    
+    
+    transition:width 2s, height 2s;
+
+    /*
+    transition:all 2s ease-in;      한번에 처리도 가능
+
+    ease in 외에도 여러 transition animation이 많으니 찾아보며 사용해야 함
+    */
+
+    /* 변하는데 걸리는 시간 지정 */
+  }
