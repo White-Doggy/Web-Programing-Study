@@ -1,4 +1,4 @@
-Web Programing Study !!!
+Web Programing Study 
 ===========
 
 ##### Web Front-End 와 추후 Back-End의 공부 내용 혹은 테스트 내용을 업로드
@@ -15,6 +15,7 @@ Web Programing Study !!!
 
 ### 2. 네이버 부스트 코스
 ```
-1. 
+[ 1. Web Programing Basic ]
+1-1 Web개발의 이해 - FE/BE 
 
 ```
