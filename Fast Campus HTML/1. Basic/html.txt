@@ -1,0 +1,37 @@
+- empty tag -
+
+닫힌는 태그가 따로 없는 태그
+ex) 
+<TAG> == 뒤에 / 가 없는 방식
+<img /> == 뒤에가 / 있는 방식 
+
+
+- head 내부 태그 -
+
+title == 웹페이지 제목
+
+meta == 기타 모든 정보
+<meta charset="UTF-8"> == 사용 언어 선택
+<meta name="author" content="someone"> == 해당 이름 및, 관련 내용 설정
+<meta name="description" content="something"> == ''
+
+link == 가지고올 문서 및 경로 설정
+<link rel="stylesheet" heref="./css/main.css">
+
+style == css 내부 작성
+
+script == js 내부 작성
+
+
+
+- body 내부 태그 -
+
+div == 분할
+
+img == 이미지 삽입
+<img src='./kiity.png' alt="empty"> == src 경로 / alt 대체 텍스트
+
+
+
+- 웹 표준 검사 -
+w3c validator 에 접속해 일부에 대하여 누락 검사를 진행

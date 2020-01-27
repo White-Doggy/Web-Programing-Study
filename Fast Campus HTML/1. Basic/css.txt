@@ -1,0 +1,37 @@
+- 속성 -
+color / font-size / width / margin / padding / position
+
+
+- in line -
+html tag 내부에 작성
+<div style="color: red;"> content </div>
+
+
+- 외부 css 참조 -
+<head>
+    <link rel="stylesheet" href="경로">
+</head>
+
+
+
+- 선택자 -
+태그 직접 선택 == 태그 전부 적용
+.클래스명 == 클래스 지정 적용
+#id == id는 중복으로 존재할 수 없는 유일한 개체
+
+
+
+- 여백 -
+margin / padding
+
+margin == 외부 여백 간격
+padding == 박스 내부의 여백 간격 / padding을 넣을 시, 컨텐츠의 크기가 커짐
+
+
+
+- 색상 -
+color == 폰트 색상
+background-color == 배경 색상
+
+
+

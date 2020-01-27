@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;    
+    body에는 기본적으로 마진과 패딩이 들어감으로 초기화 해야함
+}
+
+.header {        
+    border-bottom: 1px solid lightgrey;
+}
+
+.container {
+    width: 980px;
+    margin: auto;
+    가운데로 정렬 해 주는 방식
+}
+
+.container-left {
+    padding: 20px 0px;    
+}
+
+.logo {
+    float: left;
+    margin-right:10px ;
+}
+
+.logo img {
+    display: block;
+}
+
+.menu {
+    float: left;
+    
+}
+
+.menu-item {
+    float: left;
+    padding: 8px 10px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
