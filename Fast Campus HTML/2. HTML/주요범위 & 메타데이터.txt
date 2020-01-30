@@ -1,0 +1,51 @@
+1. 블록 요소
+Div, H1, P
+(따로 지정하지 않을 시) 사용 가능한 최대의 width 범위 활용 
+크기지정 가능
+수직으로 쌓임
+margin padding 모두 사용가능
+레이아웃
+
+2. 인라인 요소
+Span, IMG
+필요한 너비만큼만 활용
+크기지정 불가
+수평으로 쌓임
+margin padding에서 상, 하 에 대하여 적용 불가
+TEXT
+
+
+
+display 속성
+블록 요소 <-> 인라인 요소 변경이 가능
+
+
+
+html 태그
+<html lang="en">
+한국어는 ko
+
+
+
+<head> <body>
+문서 범위 구분
+
+
+
+<head>
+문서 제목 / 기타 정보 / 스타일 입력 / 스타일 외부에서 가져옴
+
+<meta>
+charset == 문자 셋
+name, content == 관련 정보 기입
+name="viewport" content="" == 반응형 사이트 관련
+
+<link>
+외부 파일 참조
+
+<style>
+직접 css 입력 
+
+<base>
+기본 경로를 설정해 link태그의 href에서 해당주소 기준으로 찾도록 변경
+<base href="기본 설정 링크">
