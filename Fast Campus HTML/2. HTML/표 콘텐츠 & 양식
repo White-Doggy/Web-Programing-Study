@@ -1,0 +1,138 @@
+<table>, <tr>, <th>, <td>
+표, 행, 굵은 칸, 일반 칸
+
+table == display 모드가 block과 유하사지만 table이라는 별도의 모드
+tr == display : table-row
+th, td == display : table-cell
+
+
+
+<th> 
+속성
+abbr == 열에 대한 설명
+header == 관련된 하나이상의 다른 머리글 칸 id 속성값
+colspan == 확장하려는 병합 열의 수
+rowspan == 확장하려는 병합 행의 수
+
+scope == 자신이 누구의 머리글 칸인지를 명시 (잘 안씀)
+
+
+<td> 거의 동일
+header == 관련된 하나이상의 다른 머리글 칸 id 속성값 연결 (th의 값을 연결)
+colspan == 확장하려는 병합 열의 수
+rowspan == 확장하려는 병합 행의 수
+
+
+<capion>
+테이블 바로 다음에 작성해야 함, 테이블 당 하나만 작성 가능
+
+<table>
+        <caption> data type & value </caption>
+        <tr>
+
+
+<col>, <colgroup>
+열과 열 그룹을 통해 일괄 처리가 가능해짐
+
+
+<thead> <tbody> <tfoot>
+<tr>의 바로 위 단계에서 3단계로 테이블을 구분하는 태그
+
+
+
+
+
+<form> / block 형식
+웹 서버 정보 제출을 위한 양식 범위 정의
+form이 다른 form을 자식으로 포함할 수 없음
+
+action == 전송한 정보를 처리할 웹페이지 url
+autocomplete == 이전 값으로 자동완성
+method == 서보 전송할 http 방식
+name == 양식의 이름
+novalidate == 서버 전송시 양식 데이터 유효성 검사하지 않도록 지정
+target == 서버 전송 후 응답 받을 방식을 지정 어느 창에 띄울 건지
+
+
+method GET, POST 차이
+GET==주소에 관련 정보 노출
+POST==표기하지 않음 (단 암호화는 따로 시켜야함)
+
+
+<input />
+입력받는 부분
+autocomplete == 자동완성 기능, 기본은 on
+autofocus == 페이지 로드시 자동 포커스 ( 오직 하나 )
+checked == 버튼이나, 라디오 의 경우 선택된 값이 기본
+name == 해당 양식 이름, 전송시 이 이름으로 넘어감
+
+type == 입력 받을 데이터 종류 결정
+button / number / checkbox / file / text / submit / reset
+등 겁나많다...
+
+maxlength == 최대 길이
+value == 초기값 
+disable == 변경 불가
+
+type="number" +
+max / min == 최대 최소 제한
+step == 증감 값 단위 변경
+
+
+
+<label>
+특정 input typed에 대한 제목을 설정
+
+<label><input type""/>텍스트</label>
+와 같이 작성
+
+
+
+<button>
+autofocus / disabled / form / name / type(submit, reset)
+
+
+
+<textarea>
+한줄이 아닌 여러줄의 양식
+input의 속성과 거의 유사하나 추가되는 내용
+
+rows == 줄 수를 의미
+placeholder == 관련 설명 힌트 표시
+
+
+
+<fieldset>, <legend>
+같은 목적의 양식을 그룹화, 양식의 제목을 지정
+
+
+
+<select>
+<option>, <optgroup>
+선택지 생성 관련 태그
+
+
+
+
+<datalist>
+input type text와 함께 활용해 자동완성 예시 목록으로 제공 가능
+
+ex)
+<input type="text" list="listname">
+
+<datalist id="listname">
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+</datalsit>
+
+이 경우 위 option들이 자동완성 목록으로 제공된다
+
+
+
+<progress>
+현재 작업의 진행률을 표시
+max == 작업 총량
+value == 현재 값

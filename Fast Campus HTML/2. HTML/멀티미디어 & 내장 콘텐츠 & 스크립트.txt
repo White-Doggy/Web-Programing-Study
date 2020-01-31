@@ -1,0 +1,87 @@
+<img /> / 빈태그 
+
+src(필수) == url
+alt(필수) == 이미지 존재 하지 않을시 대체 텍스트
+
+width / height == 둘 중 하나만 입력해도 비례로 변경됨
+(css 에서도 처리가능)
+
+
+srcset & sizes
+srcset에 여러 크기의 이미지의 경로 목록을 할당하고,
+sizes의 조건에 맞춰 해당 이미지를 사용하도록 하는 속성들
+
+srcset
+<img
+    srcset="경로1 가로길이w,
+            경로2 가로길이w,
+            ... "
+    width=400px
+/>
+! 만약 sizes가 선언되지 않는다면, 현재 veiwport 사이즈보다 큰 이미지를 적용
+단, width을 걸어 뒀기 때문에, 가로길이는 고정
+
+
+sizes
+sizes="(조건: 이상) srcset크기"
+
+위 기입 조건에 따라 최적화해 표기
+
+width의 경우 크기만 고정되지만,
+sizes는 크기도 조정하지만, 최적 이미지도 활용하게 됨
+
+
+
+<audio>
+autoplay / controls / loop / muted
+preload == nont, metadata, auto (기본은 metadata)
+src
+
+
+
+<video>
+autoplay / controls / loop / muted
+preload == nont, metadata, auto (기본은 metadata)
+poster = 동영상 썸네일 이미지
+src
+width / height
+
+
+
+<figure>, <figcaption>
+이미지와 캡션을 묶고 표현하는 태그들
+
+<figure>
+    <img/>
+    <figcaption>   <figcaption/>
+</figure>
+
+
+
+<iframe> / inline 요소
+다른 html 페이지를 현재 페이지에 삽입
+(중첩된 브라우저 프레임 활용, 유튜브 비메오등)
+
+name == 플임 이름
+src
+width / height
+allowfullscreen == 전체 화면 허가 여부
+frameborder == 프레임 테두리 사용 여부
+
+sand box == 보안을 위한 읽기전용 삽입, allow-form / allow-scripts / allow-same-origin
+
+
+
+<script>
+내부에 자바 스크립트 입력, 또는 가져오기
+
+async == 비동기적 실행 여부 결정 (src 속성 필수)
+defer == 실행 시점 결정, html를 전부 분석한 후 실행
+src == 외부 js를 가져옴, 스크립트 태그 사이에 내용이 있을 경우 해당 내용은 무시됨
+type == 기본값이 js라 따로 입력 불필요, 다른 script 입력시 필요
+
+
+
+<noscript>
+스크립트 지원이 안되는 경우에 표기할 HTML을 정의
+body 내부에 직접 입력해 표현
