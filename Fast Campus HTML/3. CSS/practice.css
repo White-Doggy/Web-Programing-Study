@@ -1,0 +1,19 @@
+.test {
+    
+    height: 100px;
+    background-color: tomato;
+
+}
+
+.parent {
+
+}
+
+.child {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: tomato;   
+    border: 1px solid green ; 
+}

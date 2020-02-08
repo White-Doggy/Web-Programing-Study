@@ -1,0 +1,119 @@
+[ width, height ]
+박스형태의 경우 기본 값이 설정되어 있음
+
+display : block
+width은 100% / height는 0이 auto 값으로 지정됨
+
+display : inline
+가로 세로 값이 전부 0이 오토이며,
+내부 컨텐츠가 없는 경우 따로 지정해도 아무 표기가 되지 않음
+
+
+
+[ max, min ]
+ 
+max-width / min-width
+max-height / min-height
+
+max는 none이 기본 값이며, min은 0이 기본 값
+이들 속성은 최대, 최소 값의 제한을 거는 용도
+
+min과 max를 걸어두면, 부모요소가 아무리 작거나 커져도 제한을 넘어서지 않는다.
+
+
+
+[ margin ]
+외부 여백 지칭
+* 여백에 %로 입력 시 부모요소의 가로길이에 대한 %를 적용
+
+값이 여러개 입력되는 경우, 시계방향으로 해석
+
+margin-top / margin-right / margin-bottom / margin-left
+개별로 설정도 가능하다
+
+
+
+[ margin 중복 ]
+마진의 특정 값들이 중복되어 합쳐되는 현상
+
+1. 형제 요소들의 상하의 인접 margin이 만난 경우
+2. 부모 요소와 자식요소의 상하의 margin이 만난 경우
+
+
+형제 요소의 가로 margin의 경우 합연산
+세로의 경우, 중복된 것으로 처리해 하나의 값만 적용되게 됨
+
+부모요소와 자식요소가 만나는 면의 경우
+자식요소의 margin 값을 중복시키게 된다.
+
+각 수의 값이 다른 경우 절대값이 큰 쪽으로 결정됨
+
+
+
+[ padding ]
+내부 여백 설정
+margin과 동일하게 부모요소의 가로길이를 %의 기준으로 함
+
+크기 설정은 margin과 동일
+
+* padding의 경우 값 만큼 요소의 크기가 커지게 된다. 직접 계산하던가 해서 맞춰야 함
+
+단, box-sizing: border-box; 속성을 걸어주면, 크기가 변하지 않는다.
+
+
+
+[ border ]
+선의 특성 설정 
+border-width / border-style / border-color 3가지 개별 속성이지만
+
+border: 두께 스타일 색깔;
+로 단축 입력이 가능함
+
+border-width == medium과 같은 속성들이 존재하지만, 직접 수치 입력함
+border-style == solid 일반선 / dotted 점선 / dashed 파선 / double 두 줄선 등...
+border-color == 일반적 색상, ++ transparent 투명한 선
+
+++ boder도 사이즈가 커진다. 
+   box-sizing: border-box;를 걸어주어야 사이즈가 유지됨.
+
+
+
+[ box-sizing ]
+크기 계산에 대한 개념 설정
+content-box == 직접 계산해서 처리해야 함
+border-box == 입력 수치에 맞춰 계산해 표현
+
+
+
+[ content-box & border-box ]
+개발자 환경에 보면 내부 컨텐츠만 의미 & 보더까지 포함된 박스 사이즈를 의미
+따라사 위와 같은 결과가 됨
+
+
+
+[ display ]
+display에 관련된 설정 
+block & inline & inline-block & none
+
+inline-block == 두가지 특성이 섞인 느낌
+기본 베이스는 inline 
+가로로 쌓임, 가로세로 값 가짐, 마진 패딩의 상하는 사용 가능
+
+none == 완전히 안보임
+
+
+
+[ overflow ]
+내부 컨텐츠가 넘친 경우 어떻게 처리 할 것인가에 대한 속성
+visible / hidden / scroll / auto
+
+scroll & auto == 스크롤은 항상 스크롤을 생성하며, auto는 넘친 경우만 scroll을 생성함
+
+
+
+[ opacity ]
+0~1 까지 값을 가짐 1이 100% 의미 
+
+
+
+

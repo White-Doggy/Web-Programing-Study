@@ -1,0 +1,105 @@
+[ font ]
+글꼴 관련 속성
+
+font-style / font-weight / font-size / font-height / font-family
+5개 개별 속성으로 구성됨
+
+font : 기울기 두께 크기 / 줄높이 글꼴;
+형태로 단축 속성입력이 가능함
+* 최소한 크기와 글꼴은 입력되어야 적용이 됨
+
+
+
+[ font-style ]
+글꼴의 기울기 
+normal / italic / oblique 
+일반     이탤릭    기울어진 글자
+
+
+
+[ font-weight ]
+글자의 두께를 지정
+normal(400), bold(700) 등 단어 입력 혹은 수치입력 가능
+100 ~ 900 까지 입력 가능하며 400이 기본값
+
+
+
+[ font-size ]
+폰트 크기 
+px, em, cm 등의 단위 / 기본 16px
+% 부모 요소의 비율 
+
+다른 크기 표기가 있지만 명확하지 않음으로 별로 
+++ 상속됨으로 전체 크기를 바꾸기 위해 body의 폰트 사이즈를 줄이는 방식도 가능
+
+
+
+[ font-height ]
+기준 텍스트 라인 + 상, 하 여백 == line-height
+normal 기본 / 숫자 / 단위가 있는 숫자 
+
+숫자의 경우 요소 자체 글꼴 크기 배수
+px, em 등
+
+ex)
+16px 폰트의 line-height : 2; 입력 시 
+상, 하에 8px 정도의 여백이 생기게 된다.
+
+
+
+[ font-family ]
+글꼴의 선택 관련
+
+font-family: [글꼴후보, 글꼴후보2 ...], 글꼴계열;
+
+.box {
+    font-family: Arial, "Open Sans", "돋움", sans-serif;
+}
+
+폰트가 지원되지 않는 경우가 있기 때문에, 대체할 글꼴 계열은 반드시 입력되어야 함
+후보를 다 확인한 후, 안되는 경우 계열로 선택
+
+
+글꼴계열
+
+serif == 바탕
+sans-serif == 고딕 ( 가장 일반적 )
+monospace == 고정 너비
+cursive == 필기
+
+
+
+[ color ]
+글꼴 색상
+색상 이름 혹은 rgb, rgba, hex 코드 
+
+#000000
+rgb( 255, 255, 255)
+rgba(255, 0, 0, .5)
+
+
+
+[ text-align ]
+left / right / center / justify 양쪽 맞춤 (2줄 이상의 문장)
+
+
+
+[ text-decoration ]
+텍스트에 대한 선 생성에 관련된 속성
+
+none / underline / overline / line-through
+
+
+
+[ text-indent ]
+(첫번째 줄) 들여쓰기 관련 지정 속성
+음수값도 가능함 == 왼쪽으로 튀어나감 
+
+
+
+[ letter-spacing ]
+자간
+normal 일반 / px, em, cm 등 단위 지정
+
+[ word-spacing ]
+띄워쓰기의 간격을 조절하는 속성
