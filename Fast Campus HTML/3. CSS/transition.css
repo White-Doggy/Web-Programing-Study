@@ -1,0 +1,13 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.box:hover {
+    width: 300px;
+    background: red
+}

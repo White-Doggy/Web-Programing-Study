@@ -1,12 +1,7 @@
 .test {
-    
+    width: 100px;
     height: 100px;
-    background-color: tomato;
-
-}
-
-.parent {
-
+    background-color: blue;
 }
 
 .child {
@@ -15,5 +10,11 @@
     height: 100px;
     margin: 20px;
     background-color: tomato;   
-    border: 1px solid green ; 
+    border: 1px solid green ;     
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
 }

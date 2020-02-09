@@ -1,0 +1,21 @@
+[ columns ] 단축 속성
+다단의 생성을 위한 속성
+columns: 너비 개수;
+
+columns-count / columns-width
+
+
+[column-gap]
+단과 단사이 간격 설정
+기본 1em
+
+
+[column-rule]
+단 사이의 줄에 관련된 속성 
+column-rule: 두께 종류 색상;
+
+column-width / column-style / column-color
+두께 / 종류 / 색상의 선택
+활용은 border과 같음
+
+++색상의 경우 column의 폰트색의 영향을 받음으로, 따로 명시해 주어야 한다.

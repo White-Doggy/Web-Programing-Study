@@ -1,0 +1,49 @@
+[ animation ]
+요소에 애니메이션을 설정/제어
+별도의 애니메이션 관련 내용을 선언하고 활용 하는 방식
+
+.box:hover{
+    animation: first-animation 2s 
+    infinite alternate;                                
+}
+
+@keyframes first-animation {
+    0%{
+        width: 100px;    
+    }
+    100% {
+        width: 500px;
+    }
+}
+
+
+
+@keyframes
+2개 이상의 애니메이션 중간 상태를 지정
+
+@keyframes first-animation {
+    0%{
+        width: 100px;    
+    }
+    100% {
+        width: 500px;
+    }
+}
+
+퍼센트 마다 중간단계를 추가해 변화를 줄 수 있음
+
+
+[ anmiation 속성들 ]
+animation-name / animation-duration / animation-timing-function (ease 등..)
+animation-delay / anmiation-iteration-count / animation-direction / anmiation-play-state
+
+
+++ animation-delay 
+음수 값을 적용할 수 있으며, 음수를 넣으면 음수 값 만큼 이미 진행 된 것으로 처리
+
+++ anmiation-iteration-count
+숫자 대신 infinite 입력 가능
+
+++ animation-direction
+reverse, alternate (왕복운동 실행), alternate-reverse(역방향 왕복운동)
+

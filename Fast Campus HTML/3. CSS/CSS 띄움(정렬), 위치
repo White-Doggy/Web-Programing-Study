@@ -1,0 +1,84 @@
+[ float ]
+기본적으로 띄움을 의미하지만, 정렬 용으로 사용
+
+none / left / right
+왼쪽으로 띄움 오른쪽으로 띄움의 차이
+
+연속된 박스 요소들이 float이 적용된 경우,
+수평으로 배치가 됨
+
+
+++ 단, 다른 요소들이 겹쳐지는 문제가 생김.
+따라서 이후 clear를 해제 시켜줘야 함
+
+형제 요소의 경우
+clear : both를 통해 float를 해제 시킬 수 있음
+
+부모 요소의 경우 2가지
+overflow: hidden; 혹은 
+clearfix 클래스를 추가해 해제해야 함
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+선택자 특성을 활용해 float를 clear 시키는 방식
+
+
+
+[ display 수정 ]
+float를 추가하면 display 속성이 block으로 수정됨
+
+
+
+[ clear ]
+left, right, both
+그냥 both 쓰면 됨
+
+
+
+[ position ]
+요소의 위치 지정 방법의 유형을 설정
+static = 유형 기준 없음 기본값
+relative = 자신을 기준으로 배치
+absolute = 배치상 부모를 기준으로 처리
+fixed = 고정 값
+
+top / bottom / right / left
+들을 통해 위 기준을 바탕으로 배치
+
+
+relative
+자기 기준 배치, 단 주변에 영향받거나 주기 때문에 주의해야 함
+
+
+absolute
+위치상 부모요소 기준으로 배치 (position 값을 가진 요소를 부모로 침)
+
+* 즉 기본값인, postion : static을 relative로 바꿔줘야 한다.
+( 다른 position들은 다른 개체에 영향을 줌으로 안됨)
+
+
+fixed
+브라우저의 뷰포트 기준으로 배치 고정
+
+
+sticky
+스크롤 영역 기준으로 배치 / 익스플로러 적용 불가
+포지션 값 1개가 필요 
+부모 요소 범위 내에서 붙은 상태로 뷰포트를 따라오게 됨
+
+
+
+[ 요소 쌓임 순서 ]
+어떤 요소가 사용자와 가깝게 있는지를 결정 (z축)
+
+static 제외, position 값이 있는 경우 앞으로 나옴
+position 값을 가진 상태에서 z-index 값을 조정해 앞으로 나오게 함
+위 두가지가 모두 같다면 나중에 작성한 요소가 앞으로 튀어나옴
+
+
+
+[ display 수정 ]
+flaot와 마찬가지로, position이 부여되면 display가 block으로 수정됨

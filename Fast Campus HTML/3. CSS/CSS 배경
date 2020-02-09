@@ -1,0 +1,52 @@
+[ background ] 단축 속성
+배경 관련 속성
+background: 색상 이미지경로 반복 위치 스크롤특성;
+
+
+[ background0-color ]
+색상 입력 / transparent
+
+
+[ background-image ]
+하나 혹은 하나이상의 이미지를 입력
+none / url("경로")
+
+다중 이미지를 넣을때,
+background-image: url(""), url(""), url(""), ... ;
+background: url("") 나머지 관련 정보, url("") 나머지 관련 정보, url("") 나머지 관련 정보;
+
+다중 이미지를 넣을 경우, 먼저 입력된 이미지가 가장 앞쪽에 배치되는 형태로 생성됨
+
+
+[ background-repeat ]
+repeat (기본값) / repeat-x / repeat-y / no-repeat
+
+
+[ background-position ]
+배경 위치를 임의로 설정
+
+% / 방향 / 단위로 설정
+
+background-position: 방향1 방향2;
+
+단위인 경우
+background-position:  x축 y축;
+
+
+[ background-attachment ]
+배경이미지가 스크롤과 어떻게 반응 할 것인가
+
+scroll == 배경이 스크롤을 따라 스크롤됨 (기본 값)
+fixed == 배경이미지가 뷰포트에 고정되어 이동하지 않음
+local == 요소 내 스크롤 시 배경이미지가 스크롤 됨
+
+
+[background-size]
+auto 원래 이미지 크기
+단위
+cover 이미지 비율을 유지하며, 요소의 더 넓은 너비에 맞춤 = 이미지 잘릴 수 있음
+contain 이미지 비율을 유지하며, 요소의 더 짧은 너비에 맞춤 = 이미지가 잘리지 않음
+
+
+
+

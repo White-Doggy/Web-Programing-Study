@@ -1,0 +1,32 @@
+.parent {
+    width: 1000px;
+    height: 400px;
+    background-color: blue;
+    position: relative;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 4px solid white;    
+    box-sizing: border-box;
+}
+
+.relative {
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+.absolute {
+    position: absolute;
+    right: 100px;
+    top: 0px;
+}
+
+.fixed {
+    position: fixed;
+    right: 100px;
+    top: 0px;
+}
