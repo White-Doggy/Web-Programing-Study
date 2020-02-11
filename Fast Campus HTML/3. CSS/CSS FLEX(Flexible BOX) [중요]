@@ -1,0 +1,120 @@
+[ flex ]
+inline, float의 경우 문제가 생길 수 있었다.
+이를 대체할 속성
+
+부모요소에 대해 display : flex로 지정해 적용
+
+부모요소 == container
+자식요소 == item
+이라 지칭 
+
+display 관련 속성으로 flex들을 가짐
+
+flex / inline-flex
+둘다 flex를 지칭하지만
+container 자체가 block인지 inline 요소인지를 결정함
+
+
+
+[ flex-flow] / 단축 속성
+주축 여러줄을 묶는다는 의미
+flex-flow: direcetion wrap;
+
+flex-direcetion / flex-wrap 의 단축 속성
+
+
+flex-direcetion 
+row / 수평 정렬 - main 축이 가로 
+row-reverse / 수평 반대 정렬
+column / 수직 정렬 - main 축이 세로
+column-reverse / 수직 정렬 정렬
+
+main 축의 반대 축은 cross 축으로 지정
+
+main-start == 주축의 시작점
+main-end == 주축의 끝
+
+main 축이 가로 세로로 바뀜으로 시작점도 달라짐
+reverse에도 영향을 받음
+
+*cross 축의 경우는 end와 start가 달라짐
+
+
+flex-wrap
+item의 여러줄 묶음을 설정
+
+nowrap / wrap / wrap-reverse
+한줄로 표시 / 여러줄로 표시 / 여러줄로 반대표시
+
+nowrap의 경우 다른 속성에 의해 item의 width값이 줄어들 수 있는데,
+wrap을 통해 여러줄로 넘어가도록 설정할 수 있다.
+
+
+
+[justify-content]
+주축의 정렬 방법을 설정
+
+justify-contetn : flex-start / flex-end / center / space-between / space-around
+
+각각, 시작점 정렬, 끝점 정렬, 가운데 정렬, 여백 동일 2종이 됨
+
+
+[align-content]
+교차축의 정렬 방법을 설정
++ flex-wrap을 통해 wrap으로 여러줄이 된 경우만 적용
+
+justify-content와 비슷한데 stretch가 추가
+
+stretch == 세로값이 따로 지정되지 않은 경우, 길이를 늘려서 container에 맞춘 배열
+
+
+
+[ algin-items ]
+item들이 한줄인 경우 정렬하기 위해 사용 
+(위 content 속성과 달리, flex-wrap : wrap 이 아니라도 됨)
+
+cross 축의 한 줄에 대한 정렬 내용
+
+algin-content와 유사한데 추가로 baseline이 존재
+baseline은 문자선을 기준으로 함
+
+
+
+[ flex-items에 적용하는 속성들 ]
+order / flex / flex-grow / flex-shirink / flex-basis / algin-self
+
+
+[ order ]
+item의 순서설정, align 되도록 함
+
+
+[flex-grow]
+item의 증가 너비 비율을 설정함 
+숫자가 크면 item의 증가너비 비율 만큼의 너비를 가질 수 있음
+item이 container에서 차지하는 크기 비율을 입력하는 것
+
+
+[flex-shirink]
+반대로 item 감소 너비 비율을 설정
+클수록 감소되는 양이 큼
+
+
+[flex-basis]
+item의 기본 너비를 설정
+결과 위의 grow와 shirink의 증감량에 영향을끼침
+
+
+[ flex ]
+
+flex : 증가너비 감소너비 기본너비;
+       grow / shirink / auto
+       
+기본 값들 == 0 / 1 / auto
+
+++ 단, flex의 단축속성 선언의 경우 기본너비를 따로 선언하지 않으면
+    기본 값인 auto가 아닌 0이 됨
+
+
+
+[ algin-self ]
+필요에의해 아이템 일부만 다른 정렬을 시키고 싶은 상황에 적용
