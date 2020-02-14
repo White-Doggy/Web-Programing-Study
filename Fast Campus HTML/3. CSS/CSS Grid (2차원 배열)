@@ -1,0 +1,243 @@
+https://heropy.blog/2019/08/17/css-grid/
+이건 그냥 블로그에서 찾는게 나을지도 모른다...
+
+
+
+[ 그리드 ]
+2차원의 레이아웃 시스템 제공
+
+flex의 경우 1차원 배열을 제공
+grid는 2차원으로 복잡한 형태의 배열 가능
+
+flex와 같이 container와 item으로 구분
+
+
+
+[ grid container ]
+최초의 정의, flex와 같이 display에 입력
+grid / inline-grid
+
+display: grid
+
+
+
+[ grid-template-rows ]
+명시적으로 행의 크기 관련 정의
+
+[ grid-template-columns ]
+명시적으로 열의 크기 관련 정의
+
+grid-template-rows: 100px 150px;
+grid-template-columns: repeat(3, 1fr);
+
+순차적으로 입력한 값을 할당, repeat 함수를 통해 반복 처리 가능
+전체 크기에서 fr은 비율로 처리
+
+
+
+
+[grid-row]
+단수 == item에 적용 시키는 속성
+행을 늘리는 함수
+
+[grid-coulmn]
+열을 늘리는 함수
+
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+좌측 상단 부터 우측, 아래측으로 1부터 번호를 붙인 격자가 존재하는데,
+시작선 / 끝선 입력을 통해 해당 크기만큼의 면적을 차지하도록 할 수 있다.
+
+
+
+
+[ grid-template-areas ]
+item 속성
+그리드 영역 이름을 참조해 그리드 템플릿을 생성함
+
+.container2 {
+    display: grid;
+    grid-template-rows: repeat(3,100px);
+    grid-template-columns: repeat(3,1fr) ;
+
+    grid-template-areas: 
+    "header header header"
+    "main . aside"
+    "footer footer footer";
+}
+// 이런 식으로 배열형태 자체를 입력해 배열
+// . 의 경우는 빈칸을 의미 
+
+.item2 {
+    border: 10px solid red;
+}
+
+.item2:nth-child(1) {
+    grid-area: header;
+}
+
+.item2:nth-child(2) {
+    grid-area: main;
+}
+.item2:nth-child(3) {
+    grid-area: aside;
+}
+.item2:nth-child(4) {
+    grid-area: footer;
+}
+
+
+
+[ row-gap, column-gap ]
+행, 열 사이의 간격(선 두께)를 추가함
+
+gap: 행 열;
+이라는 단축 속성으로 한번에 처리 가능
+
+
+
+[ grid-auto-rows, grid-auto-columns ]
+암시적 행, 열의 크기 지정
+명시적 행 밖으로 넘어가는 요소들에 대해 적용될 값을 선언
+grid-row / grid-column 에 의해 명시적 정의 밖에 지정될 수 있음
+(명시적 정의 밖의 요소는 크기가 정상적이지 않다.)
+
+
+
+[ grid-auto-flow ]
+배치하지 않은 아이템을 어떤 식으로 방식될지에 대한 처리 방향
+
+row / column / row dense / column dense
+행(기본값) / 열 / 행+빈영역 메움 / 열+빈영역 메움
+
+
+[ grid-template-rows 추가 사항 ]
+grid-template-rows: repeat(4, 1fr);
+가 기본 이었는데,
+
+추가로 선의 이름에 대한 선언도 가능
+grid-template-rows: [first] 100px [first-end second] 200px [third];
+
+[]가 이름, 띄워쓰기 구분으로 중복 선언 가능
+이런 이름은 grid-colmn, grid-row에 사용가능
+
+grid-row : first / first-end
+
+
+
+[ repeat ]
+repeat(2, 100px 200px);
+로 입력시, 100 200 100 200으로 4회를 의미
+
+
+
+[ grid-area ]
+item에 대해 영역을 직접 적용하는 방식
+gird-area : 행시작 / 열시작 / 행끝 / 열끝
+
+
+
+[grid-template] 
+area와 template-coulmn, template-row를 한번에 처리;;
+
+
+
+[ grid ]
+grid-template 과 grid-auto 의 단축 속성
+매우 복잡다;
+
+https://heropy.blog/2019/08/17/css-grid/
+
+
+
+[align-content]
+수직 열 축의 정렬을 정의
+콘텐츠의 세로 너비가 container 보다 작아야함 (당연;)
+
+기본값 == stretch
+algin-content: start / center / end / space-around / space between / space-evenly / stretch
+차례대로, 수직 시작점, 수직 끝점, 여백종류, 컨텐츠 늘림 정렬
+
+
+
+[align-items]
+grid에서 item들에 대해서 container내부의 할당된 영역 내에서
+수직 정렬하는 기준 정의;
+위 align-content와는 다른 형태의 정렬
+
+start / center / end /
+
+
+[justify-items]
+align이 수직정렬이라면, 이 것은 수평 정렬
+
+
+
+[ align-self / justify-self ]
+위의 내용들은 컨테이너에 적용하는 내용인데,
+self류는 개별 item에 대해 각각 적용하는 속성
+
+
+
+[order]
+그리드 아이템의 자동배치 순서를 임의로 변경
+수서가 작을수록 먼저 배치됨
+
+[z-index]
+전에 나왓던 개념과 동일
+수치가 높을 수록 앞으로 튀어나옴
+
+
+
+[grid functions]
+repeat도 함수임
+
+repeat()
+반복이 되는 입력을 줄임
+repat(횟수, 내용)
+내용 자체가 반복 되기 때문에 이름 적용도 가능
+
+ex)
+grid-template: repeat(2, [row-start] 200px [row-end]) / repeat(3, [col-start] 100px [col-end]);
+
+
+minmax()
+최소 최대 값을 정의
+minmax(최소, 최대)
+
+
+fit-content()
+포함하는 내용(content)의 크기에 맞춤
+fit-content(최대크기)
+
+입력된 최대크기보다 커질수는 없도록 제한
+
+
+
+[ gird 단위 ]
+
+fr
+사용 가능 공간에 대한 비율
+container내부의 형제 요소들이 사용하는 공간들의 비율을 고려함
+
+min-content
+해당 대상이 가질수 있는 최소길이로 지정
+
+max-content
+반대~
+
+
+auto-fill, auto-fit
+행, 열의 개수를 그리드 컨테이너 및 행열 크기에 맞게 자동적으로 조정
+repeat() 과 함께 사용하게 됨
+
+grid-template-columns: repeat(auto-fill, ~)
+
+조건에 맞게 암시적으로 열의 크기를 맞춰주게 됨
+
+
+동작은 동일한데
+남은 공간에 대해서,
+fill의 경우 남은 공간을 그대로 유지
+fit의 경우 남은 공간을 축소시킴
