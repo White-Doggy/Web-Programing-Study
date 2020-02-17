@@ -1,0 +1,110 @@
+
+[ 함수 ]
+
+선언
+function 함수명(파라미터, 파라미터) {
+    return 
+}
+
+ES6 이후의 template literal
+문자열 내에서 변수 활용에 있어서 ${변수명}을 통해 간략하게 입력 가능
+
+ex)
+console.log('테스트 ${변수}!');
+
+
+
+[ 함수의 다른 선언 방식 ] / ES6의 추가요소
+
+const add = (변수, 변수) => {
+    retrun 결과;
+}
+
+
+
+[ 객체 ]
+여러 값을 가지게 되는 대상
+
+const dog = {
+    key1 : 값,
+    key2 : 값,    
+}
+
+내용의 활용은 
+dog.key1 와 같은 형태로 활용
+
+
+
+[ 객체 비구조 할당 ]
+객체의 key값들을 변수처럼 할당해 바로 활용가능 하도록 함
+(함수에서 객체명.key 와 같이 번거롭게 쓸 필요가 줄어듬)
+
+const { key1, key2, key3 } = 객체
+
+
+
+[ 객체 내부 함수 ]
+
+const dog = {
+    name : 'doggy'
+    sound : 'gggg'
+    say : function say() {
+        console.log(this.sound)
+    }
+}
+
+this는 객체 자체를 의미
+
+++ 단 이때 함수 선언은 => 함수는 this를 인식하지 못함
+
+
+
+[ getter]
+
+const name = {
+    key:
+    key:
+
+    get 함수명() {
+        retrun this.key + this.key;
+    }
+}
+
+console.log(name.함수명);
+
+getter 함수
+처리 값에 대한 결과를 얻어 활용하기 위한 함수
+
+
+
+[ setter ]
+값을 적용시키는 함수
+
+const name = {
+    _key: "",
+
+    get 함수명 {
+        ...
+    }
+
+    set 함수명(value) {
+        this._key = value;
+    }
+}
+
+dog 함수명 = 값
+()없이 입력값을 반영
+
+
+++ getter 함수와 setter 함수는 동일 이름을 가질 수 있음, 
+   단 key 값들과는 동일 이름은 못 가짐
+
+
+
+[ 관련 함수 ]
+
+Object.entries(객체명);
+Object.keys(객체명);
+Object.values(객체명);
+
+관련 내용을 활용할 수 있도록 하는 함수들

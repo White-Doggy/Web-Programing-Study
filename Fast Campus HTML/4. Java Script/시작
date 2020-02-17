@@ -1,0 +1,96 @@
+[ 변수 ]
+
+변수 선언
+let value = 1;
+
+var temp = 1;
+( 중복 선언 가능 )
+
+상수 선언
+const a = 2;
+
+
+
+[ 자료형 ]
+
+텍스트, boolean, 
+
+
+
+[ null & undefined ]
+
+null == 없다
+undefined == 아직 지정하지 않았다.
+
+
+
+[ 논리 연산자 ]
+
+! / && / ||
+
+
+
+
+[ 비교 연산자 ]
+
+== / 문자 내용만 비교함 
+=== / 내용 뿐만 아니라 자료형 까지 비교
+
+!= / !==
+
+
+
+[ 문자열 합치기 ]
+그냥 변수를 문자열로 선언하고 연산자로 합치면 됨
+
+
+
+[ 조건문 ]
+if / else / else if 
+사용법은 다 동일
+
+switch (조건변수) {
+    case 값:
+    break;
+}
+
+
+
+[ 반복문 ]
+
+for (let i =0; i<10; i++) {}
+
+
+let i =0;
+while (i<10) {
+    i++;
+}
+
+
+[for of]
+배열에 쓰기 좋은 for 문
+
+const numbers = [1,2,3,4,5];
+
+for(let number of numbers) {
+    console.log(number);
+}
+
+배열 내용을 사용해서 활용
+근데 배열 내장함수도 있어서 별로
+
+
+
+[ for in ]
+객체 내부의 요소들을 활용할 수 있는 형태
+
+for(let 변수 in 객체명 ) {
+    ~~~
+}
+
+
+
+[ continue / break ]
+인접 반복문 계속 , 탈출
+
+
