@@ -1,0 +1,63 @@
+[ 객체 생성자 ]
+
+선언
+function 생성자명( p1, p2, p3) {
+    this.key1 =p1;
+    this.key2 =p2;
+    this.key3 =p3;
+}
+
+호출
+const somthing = new 생성자명( 값1, 값2, 값3);
+
+
+
+[ prototype ]
+객체 생성에 있어서
+공통으로 가지게 될 요소들(동일 기능을 할 함수 등..)을 선언해주는 것
+
+생성자명.prototype.변수, 함수이름 = ...
+
+
+
+[ 객체 생성자 상속 ]
+
+부모 생성자로써 
+function 생성자명( p1, p2, p3);
+가 존재 할때,
+
+
+function 자식생성자명(p2, p3) {
+    부모 생성자명.call(this, 지정값, p2, p3);
+    ...
+}
+
+자식 생성자.prototype = 부모생성자.prototype;
+
+으로 선언함
+
+
+
+[ ES6 Class ]
+ES6 이후 클래스가 추가됨
+
+class 이름 {
+    constructor( p1, p2, p3) {
+    this.key1 =p1;
+    this.key2 =p2;
+    this.key3 =p3;
+    }
+}
+
+const thing = new 클래스명(p1, p2, p3);
+
+
+상속의 경우
+
+class 자식이름 extend 부모이름 {
+    constructor(p2, p3) {
+        super(고정, p2, p3);
+    }
+}
+
+으로 객체 상속보다 수월하다
