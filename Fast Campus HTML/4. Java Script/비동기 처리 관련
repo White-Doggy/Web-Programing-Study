@@ -1,0 +1,53 @@
+[동기 , 비동기]
+
+동기 == 작업의 순차적 처리 과정
+비동기 == 작업의 순서 관계 없이 동시 처리
+
+비동기 처리 활용
+ajax web api 요청 / 파일 읽기 / 암호화 복호화 / 작업 예약
+
+
+setTimeout함수를 통해 비동기 처리
+callback & promise를 활용해 처리이후 이어서 진행되도록 추가 적용
+
+
+
+[ promise ]
+callback 대신 활용 가능한 비동기 작업 처리 기능
+
+return new promise((resolve, reject) => {
+    setTimeout(() => {
+        const value = n+1;
+        if (value === 5) {
+            const error = new Error();
+            error.name = 'ValueisFiveError';
+            reject(error)
+            return;
+        }
+        console.log(value);
+        resolve(value);        
+    }, 1000);
+})
+
+와 같은 형태로 쓴다고 하는데 이새끼 존나 막 넘긴다
+책같은거 찾아봐야할 듯
+
+https://learnjs.vlpt.us/async/
+
+
+
+[ async, await ]
+
+ex)
+fucntion sleep(ms) {
+    return new promise(resolve => setTimeout(resolve ,ms));
+}
+
+async function process() {
+    console.log(hi);
+    await sleep(1000);
+    console.log(bye);
+}
+
+process();
+

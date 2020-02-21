@@ -1,0 +1,25 @@
+[ 연동 ]
+html의 조작을 위해 js로 연결해 처리
+
+dom 문서 기반
+
+const number = document.getElementById('number');
+const inc = document.getElementById('inc');
+const dec = document.getElementById('dec');
+
+inc.onclick = () => {
+  console.log('inc click');
+  const current = parseInt(number.innerText, 10);
+  number.innerText = current + 1;
+}
+
+dec.onclick = () => {
+  console.log('dec click');
+  const current = parseInt(number.innerText, 10);
+  number.innerText = current - 1;
+}
+
+
+
+[ 모달 ]
+열고 닫는 형태의 인터페이스
