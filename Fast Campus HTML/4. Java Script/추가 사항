@@ -1,0 +1,164 @@
+[ 삼항 연산자 ]
+그냥 전에 쓰던
+
+condition ? true : false
+
+형태
+
+
+
+[ Trutyh & Falsy ]
+
+Falsy = undefined, null, 0, '', NAN 5 가지의 false와 유사한 값
+
+Truty = 위와 반대로 값 존재 즉 true와 유사한 값을 의미
+
+조건문 등에 활용
+
+
+
+[ 단축 평가 논리 계산법 ]
+
+&& 에 있어서
+1 && 2 의 경우, 좌항이 true라면 뒤의 임의의 값이 결과로 나옴
+( false 인 경우는 좌항의 falsy 값이 나오게 됨)
+
+값이 ture인지 확인할 때 활용 가능.
+
+object && object.name;
+
+
+||에 경우
+좌항이 참인 경우, 좌항을 결과로 넘김
+이를 활용하여 표시에 사용가능
+
+
+
+[ 함수 기본 파라미터 ]
+
+function name(x = 기본값) {    
+    return x*3;
+}
+
+
+
+[ 조건문의 단축 ]
+여러 값에 대해 비교를 위한 배열 내장 함수 활용
+
+array = [1, 2, 3, 4]
+array.includes(r);
+
+결과 값으로 true, false를 도출
+
+
+객체로는 반환값을 구할 수 있음
+
+const object = {
+    p1 : 1,
+    p2 : 2,
+    p3 : 3,
+    p4 : 4
+};
+return object[input] || "none";
+
+이런식으로 input에 따라 값을 도출하는 것도 가능
+
+
+
+
+[ 비구조화 할당 ]
+const object = { a:1, b:2 };
+const {a, b} = object;
+console.log(a)
+console.log(b)
+
+와 같이 객체 내부 값을 직접 사용 가능하도록 함
+
+const {a, b=2 } = object;
+라 비구조화 할경우 기본값을 정해 없는 경우를 대처함
+
+
+배열에도 비구조화가 가능
+const array  = [1,2];
+const [one,two] = array;
+
+
+특정 내용을 추출해 활용하기 좋은 방식
+
+
+
+[ spread ]
+
+spread
+... 으로 표기
+
+특정 객체의 내용을 모두 가져와 뿌려줌
+
+ex)
+
+const p1 {
+    name : test;
+}
+
+const p2 {
+    ...p1,
+    attribute: added;
+}
+
+이경우, name : test;를 가져와 동일하게 추가함
+배열에서도 활용 가능
+
+
+함수에서의 경우...
+
+const numbers [1,2,3,4,5,6,7];
+sum(...numbers);
+
+와 같이 인수로써 spread를 활용해 단축할 수 있다.
+
+
+
+[ rest ]
+레스트도 ... 로 표현
+함수의 파라미터와 객체의 배열에 활용
+
+비구조화 할당의 예를 보면
+
+const object = { a:1, b:2, c:3};
+const {a, ...rest} = object;
+console.log(a)
+console.log(rest)
+
+시 rest에는 b, c다 포함
+
+마찬가지로 배열에서도 활용가능
+
+
+함수에서는...
+
+function sum(...rest) {
+    ~~~
+}
+
+와 같이 파라미터가 매우 많을때 ...rest로 받고
+rest.reduce((acc, current) => acc + current, 0);
+와 같은 방식으로 활용 가능
+
+
+
+[ scope ]
+말이 그렇지 그냥 변수 활용 범위...
+global / function / block
+지역 함수 블록
+
+주의점은 var 을 통해 선언한 변수의 경우 범위가 달라질 수 있음으로
+let과 const를 활용하는게 낫다
+
+
+
+[ hoisting ]
+코드 아래 부분에 선언한 변수, 함수를 위로 끌어올려 정상 작동하도록 하는 방법
+단, 코드 읽기가 힘들고 유지 보수가 힘들기 때문에 방지해야함
+
+var로 선언한 변수는 hoisting이 발생함
+
