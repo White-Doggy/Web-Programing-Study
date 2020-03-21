@@ -19,7 +19,5 @@ dec.onclick = () => {
   number.innerText = current - 1;
 }
 
-
-
-[ 모달 ]
-열고 닫는 형태의 인터페이스
+document.getElementById('id')
+document.querySelector('.class')
