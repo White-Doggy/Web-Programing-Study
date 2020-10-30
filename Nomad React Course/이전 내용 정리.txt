@@ -1,0 +1,18 @@
+component 
+최소 모듈 단위
+
+jsx
+자바 스크립트 + html
+
+porps
+컴포넌트간 파라미터 변수와 같은 역할
+
+proto type
+별도의 자료형이 없는 JS에서 자료형과 초기값 제약을 걸어서 에러방지
+
+state
+동적으로 진행중 계속적인 변화가 있는 데이터
+
+class component
+state를 포함하는 컴포넌트를 활용하기 위함
+

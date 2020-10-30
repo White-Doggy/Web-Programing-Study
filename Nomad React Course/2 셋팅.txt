@@ -1,0 +1,7 @@
+node git 설치
+npm npx
+
+
+
+
+
