@@ -1,0 +1,35 @@
+node git 설치
+npm npx
+
+
+
+==== base URL 설정 방식 ====
+
+1. 파일 생성 == 'jsconfig.json'
+
+2. 내용 코드
+{
+	"compilerOptions": {
+	"baseUrl": "src"
+	}
+}
+
+//를 통해  base url을 설정하는 방식으로 바뀜
+
+
+
+==== React Router을 통해 화면 이동 처리 ====
+React router Dom
+
+yarn add react-router-dom
+
+1. Router.js  파일 내에 경로를 추가
+2. 해당 routes들을 import를 통해 가져오도록 함
+
+
+==== hash Rotuer, browser Router ===
+
+hash router == 간단, 단 # 표시로 웹처럼 안보임, 페이지의 헤시 사용
+browser Router == 웹페이지 형태, html history 활용
+
+
