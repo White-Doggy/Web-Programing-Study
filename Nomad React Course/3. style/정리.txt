@@ -1,0 +1,33 @@
+react 에서 css
+
+1. css 파일을 추하고 import 하는 방식
+-> 괜찮지만, 컴포넌트와 분리되는 문제
+
+2. 컴포넌트 이름으로 폴더를 만들고 해당 폴더 내에
+해당 컴포넌트 js 파일과 index.js, css를 넣어 관리하는 방식
+문제는 css 의 클래스 명이 global 하게 적용되기 때문에 이를 해당 컴포넌트에만 적용되도록
+하는 것이 요구됨
+
+	css 의 local 화
+	1 css 파일을 이름.module.css 으로 수정해 모듈화
+	2 import 역시 import styles from "./이름.module.css"; 으로 호출
+	3 className={styles.navList} 로 js 변수 처럼 활용
+
+
+
+3. styled-components
+yarn add styled-components
+
+js 파일 내부에 css를 컴포넌트와 같이 작성하는 형태
+
+
+
+Global style
+폰트나 페이지 공통에 활용되야 할 요소들에 대한 처리가 필요
+
+yarn add styled-reset == css를 초기화 해주는 기능
+
+
+
+withRouter
+컴포넌트를 감싸는 컴포넌트 / 라우터에 동작 전달
