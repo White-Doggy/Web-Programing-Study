@@ -1,2 +1,6 @@
 Movie DB API 활용
 
+api fetch
+
+yarn add axios
+http request 에 용이함
