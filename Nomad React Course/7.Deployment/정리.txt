@@ -1,0 +1,32 @@
+Gh page
+
+[ git 처리 관련 ]
+
+git init
+git add *
+git commit -m 'first commit'
+git remote add origin https://github.com/JIHYE-P/react-github-pages.git
+git push -u origin master
+명령어에 대해서 간단히 설명을 덧붙히자면,,,
+
+git init  // - 프로젝트에 git설치
+git add *   // - .gitignore에 있는 파일 제외하고 모두 올리기
+git commit   // -m 'first commit' - commit 메세지 작성
+git remote add origin https://github.com/JIHYE-P/react-github-pages.git   // - git 저장소 연결
+git push -u origin master   // - git master로 push
+
+
+[ Gh page 처리 관련 ] 
+1. yarn add gh-pages
+2. pakage.json 관련 스크립트 수정 == deploy, predeploy, homepage 추가 등
+
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build"
+  },
+
+"homepage": "https://White-Doggy.github.io/react-movie-app-practice/"
